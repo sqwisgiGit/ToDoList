@@ -1,0 +1,27 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: all 0.2s;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+:root {
+  --white: #FBFBFB;
+  --white-blue: #C4D9FF;
+  --gray-blue: #9AA6B2;
+  --dark-blue: #789DBC;
+  --pink: #FFCCE1;
+  --dark-pink: #c58fa6;
+  --white-pink: #fff3f6;
+  --gray: #6E7780;
+  --turquoise: #B3C8CF;
+  --dark-turqoise: #5b666a;
+  --dark: #1b1d20;
+  --button-white-blue: #cce3f8;
+  --text-blue: #3d4247;
+}

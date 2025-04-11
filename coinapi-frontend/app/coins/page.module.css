@@ -1,0 +1,19 @@
+.rootContainer {
+    display: grid;
+    grid-template-columns: 3fr 5fr 5fr 3fr;
+    grid-template-rows: 1fr;
+    height: 100%;
+}
+
+.mainContainer {
+    display: grid;
+    align-items: center;
+    gap: 10px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    height: 100%;
+    grid-column: 2 / -2;
+    grid-row: 1 / -1;
+    padding: 15px 10px;
+    box-shadow: 0 0 60px 12px rgba(0,0,0,0.10);
+}

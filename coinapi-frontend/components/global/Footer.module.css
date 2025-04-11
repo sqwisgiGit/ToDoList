@@ -1,0 +1,12 @@
+.footerContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    grid-column: 1 / -1;
+    grid-row: -1 / -2;
+    background-color: var(--gray-blue);
+    border-top: 3px solid var(--gray);
+    color: var(--dark-turqoise);
+}

@@ -1,0 +1,26 @@
+.menuContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    padding: 10px 15px;
+    background-color: var(--white-blue);
+    color: var(--white);
+    border-bottom: 3px solid var(--dark-blue);
+}
+
+.linksContainer a {
+    margin-left: 5px;
+}
+
+.logo {
+    transition: all 0.9s;
+    font-weight: bold;
+    color: var(--white);
+}
+
+.logo:hover {
+    text-shadow: var(--white) 1px 0 10px;;
+}
