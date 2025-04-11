@@ -29,6 +29,7 @@
     "axios": "^1.8.4",
     "cache-manager": "^6.4.2",
     "cache-manager-redis-store": "^3.0.1",
+    "cache-manager-redis-yet": "^5.1.5",
     "cacheable": "^1.8.10",
     "nestjs-cacheable": "^1.0.0",
     "reflect-metadata": "^0.2.2",
