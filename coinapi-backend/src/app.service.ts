@@ -1,12 +1,12 @@
 import { Inject, Injectable } from '@nestjs/common';
-import { Cache } from '@nestjs/cache-manager';
 import { HttpService } from '@nestjs/axios';
 import { firstValueFrom, map } from 'rxjs';
+import { Cache } from 'cache-manager'
 
 @Injectable()
-export class ApiService {
+export class AppService {
   constructor(
-    @Inject('CACHE_MANAGER') private cacheManager: Cache,
+    @Inject('CACHE_MANAGER') private readonly cacheManager: Cache,
     private readonly httpService: HttpService,
   ) {}
 
@@ -30,13 +30,12 @@ export class ApiService {
           return data;
         }),
       );
-    await this.cacheManager.set('coins', await firstValueFrom(coins));
+    await this.cacheManager.set(
+      'coins',
+      await firstValueFrom(coins),
+      60 * 1000,
+    );
     return coins;
-  }
-
-  async testCoin() {
-    await this.cacheManager.set('test', '222');
-    return await this.cacheManager.get('test');
   }
 
   async getCoin(symbol: string) {
@@ -59,7 +58,11 @@ export class ApiService {
           return data.find( e => e.symbol === symbol.toUpperCase() );
         }),
       );
-    await this.cacheManager.set(`coin-${symbol}`, await firstValueFrom(coin));
+    await this.cacheManager.set(
+      `coin-${symbol}`,
+      await firstValueFrom(coin),
+      60 * 1000,
+    );
     return coin;
   }
 }
